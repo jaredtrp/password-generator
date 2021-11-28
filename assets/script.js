@@ -1,3 +1,4 @@
+// Necessary variables
 let passwordLength = '';
 let passwordSelection = [];
 let passwordResult = [];
@@ -9,6 +10,7 @@ let getPasswordLength = function() {
   if (passwordLength < 8 || passwordLength > 128 || passwordLength === '' || passwordLength === null) {
     return getPasswordLength();
   }
+  // Prevents user from inputting anything other than a number
   if (isNaN(passwordLength)){
     window.alert(
       "You selection must be a number."
@@ -16,7 +18,6 @@ let getPasswordLength = function() {
     return getPasswordLength();
   }
 };
-
 
 // Confirm and input user's desired character types
 let getPasswordSelection = function() {
