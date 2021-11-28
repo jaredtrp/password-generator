@@ -9,6 +9,12 @@ let getPasswordLength = function() {
   if (passwordLength < 8 || passwordLength > 128 || passwordLength === '' || passwordLength === null) {
     return getPasswordLength();
   }
+  if (isNaN(passwordLength)){
+    window.alert(
+      "You selection must be a number."
+    );
+    return getPasswordLength();
+  }
 };
 
 
